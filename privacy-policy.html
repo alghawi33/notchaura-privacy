@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notch Aura Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; --bg: #ffffff; --fg: #1b1d24; --muted: #5b6070; --accent: #6b52f5; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d0f14; --fg: #e9eaf0; --muted: #a4a8b8; --accent: #a796ff; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; } h2 { margin-top: 2rem; }
+  em { color: var(--muted); font-style: normal; } a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>Notch Aura Privacy Policy</h1>
+<p><em>Last updated: 10 October 2026</em></p>
+<p>Notch Aura ("the app") is developed by <strong>Ghawi Apps</strong> ("we"). This policy explains what information the app accesses, how it is used, how it is protected, and how long it is retained.</p>
+
+<h2>Summary</h2>
+<ul>
+  <li>Notch Aura has no account, no advertising and no analytics.</li>
+  <li>We do not operate a server for this app and do not sell user data.</li>
+  <li>App-opening detection, notification-source detection and visual settings are processed on the device.</li>
+  <li>The optional lifetime VIP purchase is handled through Google Play Billing. Google Play processes the transaction under Google's own terms and privacy policy.</li>
+</ul>
+
+<h2>Accessibility service ("App activity")</h2>
+<p>This optional service is used only when the user enables App-opening animations. It detects that a configured app has entered the foreground so Notch Aura can start the visual effect assigned to that app. The service receives the foreground event's app package name and window class name and is configured with <code>canRetrieveWindowContent=false</code>.</p>
+<ul>
+  <li>It does not read screen content, text the user types, passwords, messages or form contents.</li>
+  <li>It does not take screenshots or perform gestures and does not control the device.</li>
+  <li>Notch Aura does not save a history of apps the user opens.</li>
+  <li>Apps the user explicitly chooses to configure, along with their animation settings, are stored locally as user settings. This is separate from the live foreground-detection event stream.</li>
+  <li>Foreground-detection event data is not transmitted or shared.</li>
+  <li>The app shows a separate prominent disclosure and asks for affirmative consent before opening Android's Accessibility settings.</li>
+  <li>The user can turn the service off at any time in Android Settings &gt; Accessibility.</li>
+</ul>
+
+<h2>Notification access</h2>
+<p>Notification access is optional and is used only when the user enables Notification animations. Notch Aura uses the posting app's package name, Android's internal notification key and whether the notification is a group summary to determine which configured visual effect should play and to avoid replaying an effect when an existing notification is merely updated.</p>
+<ul>
+  <li>The app does not read notification titles, message text, images, contacts or replies.</li>
+  <li>Notification-source events are processed on-device and are not transmitted or shared.</li>
+  <li>The app asks for consent before opening Android's Notification access settings.</li>
+  <li>The user can revoke access at any time in Android Settings.</li>
+</ul>
+
+<h2>Installed apps list</h2>
+<p>To let the user choose which apps get an animation, Notch Aura reads the names and icons of the apps that appear in the device's launcher, using Android's package manager. This list is shown only inside the app; it is not stored or transmitted. Only the apps the user explicitly configures are saved, as described under &ldquo;Information stored on the device&rdquo;.</p>
+
+<h2>Display over other apps</h2>
+<p>This permission lets Notch Aura draw the selected visual effect around the camera cutout, notification-bar area, screen edge or full screen while another app is visible. The overlay is non-interactive and is not used to capture or inspect the content underneath it.</p>
+
+<h2>Foreground service and start at boot</h2>
+<p>When Notch Aura is enabled, Android may keep its visual-effect service running in the foreground so configured effects can respond to app opens, notifications and phone unlocks. The service can be stopped by turning Notch Aura off. Android also provides system controls for active foreground services. If the user left Notch Aura enabled, the app may restore the service after a device restart where Android permits it.</p>
+<p>On Android 13 and later, Notch Aura asks for notification permission once, when the user turns it on, only so this &ldquo;Notch Aura &middot; Active&rdquo; notice can appear in the notification shade. Notch Aura posts no other notifications. If the user declines, the effects still work and Android still provides its system foreground-service/active-app indication.</p>
+
+<h2>Google Play Billing</h2>
+<p>The optional lifetime VIP is sold through Google Play Billing.</p>
+<ul>
+  <li>Google Play handles the payment screen and payment details. Notch Aura does not receive card or bank details.</li>
+  <li>The app receives product ownership/purchase state so it can grant, restore or remove VIP access.</li>
+  <li>A purchase token can be used transiently to acknowledge a completed purchase. Notch Aura does not persist the token in its own settings.</li>
+  <li>The Google Play Billing Library adds Android's Internet and network-state permissions. They are used only by that library to communicate with Google Play; Notch Aura's own code makes no network requests and sends nothing to the developer.</li>
+  <li>&ldquo;Rate Notch Aura&rdquo; only opens the app's page in the Google Play Store app.</li>
+</ul>
+<p>Purchase processing is subject to Google's privacy policy and Google Play terms. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+
+<h2>Information stored on the device</h2>
+<p>Notch Aura stores app-private settings including apps the user explicitly configured; selected effects, colours, size, speed and display time; camera calibration and other visual preferences; feature toggles; which Batch run each configured app was added in, so the app list can show one tab per batch; how many times the app was opened, used only to ask once for a Google Play rating; a Google Play review code, only if one was entered in Settings &gt; Review access (checked on the device and never sent anywhere); and a local cache of the VIP entitlement so the UI can reflect the last verified purchase state.</p>
+<p>These settings stay in app-private storage. Android's normal backup system may include app preferences in the user's device/account backup; we cannot access that backup.</p>
+
+<h2>Security</h2>
+<p>Notch Aura minimizes access by requesting only the Android capabilities needed for its visible features. Accessibility window-content retrieval is disabled. App-opening and notification-source processing occurs locally, and the app does not operate a developer backend for this data. Google Play purchase traffic is handled by Google Play's billing system.</p>
+<p>No software can guarantee absolute security. If the app's data handling changes, this policy and the Play Data safety declaration must be updated before the changed version is published.</p>
+
+<h2>Retention and deletion</h2>
+<p>We do not maintain a server-side profile or account for the user. Local settings remain until the user resets them, clears the app's storage or uninstalls the app. The app's <strong>Reset all settings</strong> control removes Notch Aura's locally stored configuration. Uninstalling also removes the app's local data, subject to any separate Android backup retained by the user's Google account under Android's own backup controls.</p>
+<p>Google Play retains transaction records according to Google's policies; those records are not held on a Notch Aura server.</p>
+
+<h2>Children</h2>
+<p>Notch Aura is not directed at children under 13 and does not knowingly operate a service that collects children's personal information.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published at the same public privacy-policy address with a revised <strong>Last updated</strong> date.</p>
+
+<h2>Contact</h2>
+<p>Developer: <strong>Ghawi Apps</strong><br>
+Privacy questions: <a href="mailto:alghawi.apps@gmail.com">alghawi.apps@gmail.com</a></p>
+</main>
+</body>
+</html>
