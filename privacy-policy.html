@@ -16,7 +16,7 @@
 <body>
 <main>
 <h1>Notch Aura Privacy Policy</h1>
-<p><em>Last updated: 10 October 2026</em></p>
+<p><em>Last updated: 16 November 2026</em></p>
 <p>Notch Aura ("the app") is developed by <strong>Ghawi Apps</strong> ("we"). This policy explains what information the app accesses, how it is used, how it is protected, and how long it is retained.</p>
 
 <h2>Summary</h2>
@@ -28,7 +28,7 @@
 </ul>
 
 <h2>Accessibility service ("App activity")</h2>
-<p>This optional service is used only when the user enables App-opening animations. It detects that a configured app has entered the foreground so Notch Aura can start the visual effect assigned to that app. The service receives the foreground event's app package name and window class name and is configured with <code>canRetrieveWindowContent=false</code>.</p>
+<p>This optional service is required when the user turns Notch Aura on. It detects that a configured app has entered the foreground so Notch Aura can start the visual effect assigned to that app. The service receives the foreground event's app package name and window class name and is configured with <code>canRetrieveWindowContent=false</code>.</p>
 <ul>
   <li>It does not read screen content, text the user types, passwords, messages or form contents.</li>
   <li>It does not take screenshots or perform gestures and does not control the device.</li>
@@ -56,7 +56,7 @@
 
 <h2>Foreground service and start at boot</h2>
 <p>When Notch Aura is enabled, Android may keep its visual-effect service running in the foreground so configured effects can respond to app opens, notifications and phone unlocks. The service can be stopped by turning Notch Aura off. Android also provides system controls for active foreground services. If the user left Notch Aura enabled, the app may restore the service after a device restart where Android permits it.</p>
-<p>On Android 13 and later, Notch Aura asks for notification permission once, when the user turns it on, only so this &ldquo;Notch Aura &middot; Active&rdquo; notice can appear in the notification shade. Notch Aura posts no other notifications. If the user declines, the effects still work and Android still provides its system foreground-service/active-app indication.</p>
+<p>On Android 13 and later, Notch Aura asks for notification permission once, when the user turns it on, so this &ldquo;Notch Aura &middot; Active&rdquo; notice can appear in the notification shade. If notifications are allowed, Notch Aura also posts a one-time notice when the three-day trial ends. If the user declines, the effects still work and Android still provides its system foreground-service/active-app indication.</p>
 
 <h2>Google Play Billing</h2>
 <p>The optional lifetime VIP is sold through Google Play Billing.</p>
@@ -70,7 +70,7 @@
 <p>Purchase processing is subject to Google's privacy policy and Google Play terms. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
 <h2>Information stored on the device</h2>
-<p>Notch Aura stores app-private settings including apps the user explicitly configured; selected effects, colours, size, speed and display time; camera calibration and other visual preferences; feature toggles; which Batch run each configured app was added in, so the app list can show one tab per batch; how many times the app was opened, used only to ask once for a Google Play rating; a Google Play review code, only if one was entered in Settings &gt; Review access (checked on the device and never sent anywhere); and a local cache of the VIP entitlement so the UI can reflect the last verified purchase state.</p>
+<p>Notch Aura stores app-private settings including apps the user explicitly configured; selected effects, colours, size, speed and display time; camera calibration and other visual preferences; feature toggles; which Batch run each configured app was added in, so the app list can show one tab per batch; how many times the app was opened, used only to ask once for a Google Play rating; a Google Play review code, only if one was entered in Notch tab &gt; Purchase &amp; Privacy &gt; Play review code (checked on the device and never sent anywhere); the trial start time, latest observed time and expiry-notice state; and a local cache of the VIP entitlement so the UI can reflect the last verified purchase state.</p>
 <p>These settings stay in app-private storage. Android's normal backup system may include app preferences in the user's device/account backup; we cannot access that backup.</p>
 
 <h2>Security</h2>
@@ -78,7 +78,7 @@
 <p>No software can guarantee absolute security. If the app's data handling changes, this policy and the Play Data safety declaration must be updated before the changed version is published.</p>
 
 <h2>Retention and deletion</h2>
-<p>We do not maintain a server-side profile or account for the user. Local settings remain until the user resets them, clears the app's storage or uninstalls the app. The app's <strong>Reset all settings</strong> control removes Notch Aura's locally stored configuration. Uninstalling also removes the app's local data, subject to any separate Android backup retained by the user's Google account under Android's own backup controls.</p>
+<p>We do not maintain a server-side profile or account for the user. Local settings remain until the user resets them, clears the app's storage or uninstalls the app. Uninstalling also removes the app's local data, subject to any separate Android backup retained by the user's Google account under Android's own backup controls.</p>
 <p>Google Play retains transaction records according to Google's policies; those records are not held on a Notch Aura server.</p>
 
 <h2>Children</h2>
